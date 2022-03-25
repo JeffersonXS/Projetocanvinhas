@@ -24,6 +24,11 @@ contexto.fillStyle = grdLinear;
 contexto.beginPath();
 contexto.fillRect (0,0,1920,1920);
 
+//Texto
+contexto.font = "80px Arial"
+contexto.fillText ("Top Gear", 80, 120, 130 );
+contexto.stroke("Top Gear", 80, 120, 130);
+
 //horizonte
 contexto.moveTo(1920,500);
 contexto.lineTo(0,500);
