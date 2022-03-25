@@ -13,6 +13,10 @@ contexto.lineTo(0,500);
 contexto.fill();
 contexto.stroke();
 
+//sombreamento geral
+contexto.shadowBlur=10;
+contexto.shadowColor="black";
+
 
 // ceu 
 var grdLinear = contexto.createLinearGradient (0, 0, 0, 450);
@@ -20,8 +24,6 @@ grdLinear.addColorStop(0, "MidnightBlue");
 grdLinear.addColorStop(0.50, "DarkSlateBlue");
 grdLinear.addColorStop(0.90, "MediumOrchid");
 contexto.fillStyle = grdLinear;
-
-
 contexto.beginPath();
 contexto.fillRect (0,0,1920,1920);
 
@@ -41,8 +43,8 @@ img2.onload=function(){
 
 
 //lua
-contexto.fillStyle = "#FFFACD";
 contexto.beginPath();
+contexto.fillStyle = "#FFFACD";
 contexto.arc(1550, 190, 130, 0, 2*3.14);
 contexto.fill();
 
@@ -134,18 +136,12 @@ contexto.lineTo(940,500);
 contexto.fill();
 contexto.stroke();
 
+
 //nuvem
 var img2= new Image();
 img2.src= 'img/nuvem.png';
 img2.onload=function(){
     contexto.drawImage(img2, 0, 50, 1100, 500);
-};
-
-//aviao
-var img= new Image();
-img.src= 'img/aviao.png';
-img.onload=function(){
-    contexto.drawImage(img, 100, 100, 500, 150);
 };
 
 //carro1
@@ -162,5 +158,13 @@ img4.onload=function(){
     contexto.drawImage(img4, 970, 500, 200, 200);
 };
 
-ctx.font = '108px serif';
-ctx.fillText('TOP GEAR', 800, 200);
+//aviao
+var img= new Image();
+img.src= 'img/aviao.png';
+img.onload=function(){
+    contexto.drawImage(img, 100, 100, 500, 150);
+	contexto1.rotate(90);
+};
+
+
+
